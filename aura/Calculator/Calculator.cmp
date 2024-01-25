@@ -1,0 +1,42 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes">
+    <aura:attribute name="inputA" 
+                    type="Integer"/>
+    <aura:attribute name="inputB" 
+                    type="Integer"/>
+    <aura:attribute name="result" 
+                    type="Double"/>
+    <div class="calc">
+    <!--
+    {! v.inputA + v.inputB} <br/>
+    {! v.inputA - v.inputB} <br/>
+    {! v.inputA * v.inputB} <br/>
+    {! v.inputA / v.inputB} <br/>
+	--> 
+    <img src="{! $Resource.Calc}" class="image"/>
+    <div class="input">
+    <lightning:input label="First Number"
+                     value="{! v.inputA}"
+                     placeholder="Enter number"/>
+    <lightning:input label="Second Number"
+                     value="{! v.inputB}"
+                     placeholder="Enter number"/>
+    </div>
+    <div class="result">
+        Result is: {! v.result}
+    </div>
+    <!-- Use c.Nameoffunction -->
+    <lightning:button label="Addition" 
+                      variant="Base"
+                      onclick="{! c.add}"/>
+    <lightning:button label="Subraction" 
+                      variant="Destructive"
+                      onclick="{! c.sub}"/>
+    <lightning:button label="Multiplication" 
+                      variant="success"
+                      onclick="{! c.mul}"/>
+    <lightning:button label="Division"
+                      onclick="{! c.div}"/>
+    </div>
+    <audio src="{! $Resource.SampleMp3}" aura:Id="clip" controls="controls"/>
+    
+</aura:component>

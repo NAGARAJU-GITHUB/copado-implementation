@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <customApplications>
+        <description xsi:nil="true"/>
+        <label><!-- DreamHouse --></label>
+        <name>DreamHouse</name>
+    </customApplications>
+    <customApplications>
+        <description xsi:nil="true"/>
+        <label><!-- New Millennium Delivery --></label>
+        <name>New_Millennium_Delivery</name>
+    </customApplications>
+    <customTabs>
+        <label><!-- Calculator --></label>
+        <name>Calculator</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Command Center --></label>
+        <name>Command_Center</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Einstein Vision --></label>
+        <name>Einstein_Vision</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Friends with Boats --></label>
+        <name>Friends_with_Boats</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Heat Map --></label>
+        <name>Heat_Map</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Heat Map (Demo) --></label>
+        <name>Heat_Map_Mock</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- House Explorer --></label>
+        <name>House_Explorer</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Property Explorer --></label>
+        <name>Property_Explorer1</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- SamplePage --></label>
+        <name>SamplePage</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Data Import --></label>
+        <name>Sample_Data_Import</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- TabSet --></label>
+        <name>TabSet</name>
+    </customTabs>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Snapins_Case_OfflineCaseQuickAction_08hf4000000TPIA --></label>
+        <name>Snapins_Case_OfflineCaseQuickAction_08hf4000000TPIA</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Snapins_Case_PrechatQuickAction_08hf4000000TPIA --></label>
+        <name>Snapins_Case_PrechatQuickAction_08hf4000000TPIA</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Snapins_Contact_PrechatQuickAction_08hf4000000TPIA --></label>
+        <name>Snapins_Contact_PrechatQuickAction_08hf4000000TPIA</name>
+    </quickActions>
+</Translations>

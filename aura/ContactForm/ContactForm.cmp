@@ -1,0 +1,25 @@
+<aura:component controller="ContactController" 
+                extends ="c:GenericServerCall">
+    <!-- Define a String and contact type attributes -->
+    <aura:attribute name="status" type="String" default="Draft"/>
+    <aura:attribute name="cont" type="Contact" default="{ 'sObjectType' : 'Contact' }"/>
+    
+    <!--Take user input-->
+    <div>
+        Contact
+    </div>
+    <div>
+        {! v.status}
+    </div>
+    
+    <lightning:input label="First Name" value="{! v.cont.FirstName}"/>
+    <lightning:input label="Last Name" value="{! v.cont.LastName}" onchange="{! c.validateLN}"/>
+	<lightning:input label="Email" value="{! v.cont.Email}"/>
+    
+    <lightning:button label="Save" 
+                      variant="brand"
+                      iconName="utility:save"
+                      onclick="{! c.save}"
+                      disabled="true"
+                      aura:Id="btn1"/>
+</aura:component>

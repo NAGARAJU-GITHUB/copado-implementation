@@ -1,0 +1,6 @@
+<aura:component >
+    <!-- Defining aura attribute -->
+    <aura:attribute name="msg" type="String" default="Training"/>
+    <!-- Displaying attribute value -->
+    Welcome to Lightning {! v.msg} <br/>
+</aura:component>

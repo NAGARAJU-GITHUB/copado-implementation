@@ -1,0 +1,11 @@
+.THIS {
+}
+.THIS .input{
+    width: 40%;
+    display: inline-block;
+}
+.THIS .btn1{
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}

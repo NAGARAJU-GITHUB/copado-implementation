@@ -1,0 +1,11 @@
+<aura:component>
+    <!-- Specify modalExample component aura:dependency component so that we could create instance 
+         dynamically without any side effect-->
+    <lightning:buttonMenu iconName="standard:service_appointment"
+                          onselect="{! c.handleSelect}">
+        <lightning:menuItem label="View" value="View" iconName="action:preview"/>
+        <lightning:menuItem label="Edit" value="Edit" iconName="action:edit"/>
+        <lightning:menuItem label="Delete" value="Edit" iconName="action:delete"/>
+    </lightning:buttonMenu>
+	<div aura:Id="modalDiv"/>
+</aura:component>

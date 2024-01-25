@@ -1,0 +1,18 @@
+.THIS {
+}
+.THIS .input {
+    width: 40%;
+}
+.THIS .result {
+    font-size: 15px;
+    color: green;
+}
+.THIS .image {
+    width: 250px;
+    height: 250px;
+}
+.THIS.calc {
+    width: 40%;
+    height: 40%;
+    border: 5px solid;
+}

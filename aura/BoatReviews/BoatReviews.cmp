@@ -1,0 +1,53 @@
+<aura:component controller="BoatReviews">
+    <aura:attribute name="boat" type="Boat__c"/>
+    <aura:attribute name="boatReviews" type="BoatReview__c[]" access="Private"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{!v.boat}" action="{!c.doInit}"/>
+    <aura:method name="refresh" action="{!c.doInit}" access="public"/>
+    <aura:if isTrue="{! !empty('v.boatReviews')}">
+        <aura:iteration items="{!v.boatReviews}" var="boatReview">
+            <ui:scrollerWrapper class="scrollerSize">
+                <div class="slds-feed">
+                    <ul class="slds-feed__list">
+                        <li class="slds-feed__item">
+                            <article class="slds-post">
+                                <header class="slds-post__header slds-media">
+                                    <div class="slds-media__figure">
+                                        <a href="javascript:void(0);" class="slds-avatar slds-avatar_circle slds-avatar_large">
+                                            <img src="{!boatReview.CreatedBy.SmallPhotoUrl}" title="{!boatReview.CreatedBy.Name}" />
+                                        </a>
+                                    </div>
+                                    <div class="slds-media__body">
+                                        <div class="slds-grid slds-grid_align-spread slds-has-flexi-truncate">
+                                            <p>
+                                                <a href="javascript:void(0);" title="{!boatReview.CreatedBy.Name}" onclick="{!c.onUserInfoClick}" data-userid="{!boatReview.CreatedBy.Id}">{!boatReview.CreatedBy.Name}</a>
+                                                <aura:if isTrue="{!boatReview.CreatedBy.CompanyName}"> 
+                                                    — {!boatReview.CreatedBy.CompanyName}
+                                                </aura:if>
+                                            </p>
+                                            <p><a href="javascript:void(0);" title="{!boatReview.Name}">{!boatReview.Name}</a></p>
+                                        </div>
+                                        <p class="slds-text-body_small">
+                                            <lightning:formattedDateTime value="{!boatReview.CreatedDate}" hour="numeric" minute="numeric" second="numeric"/>
+                                        </p>
+                                    </div>
+                                </header>
+                                <div class="slds-post__content slds-text-longform">
+                                    <lightning:formattedRichText value="{!boatReview.Comment__c}" />
+                                </div>
+                                <div>
+                                    <c:FiveStarRating value="{!boatReview.Rating__c}" />
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+            </ui:scrollerWrapper>
+        </aura:iteration>
+        <aura:set attribute="else">
+            <div class="slds-align_absolute-center">
+                No reviews available.
+            </div>
+        </aura:set>
+    </aura:if>
+</aura:component>

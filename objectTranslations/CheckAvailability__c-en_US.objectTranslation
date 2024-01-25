@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CheckAvailability</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CheckAvailability</value>
+    </caseValues>
+    <fields>
+        <label><!-- End Location --></label>
+        <name>End_Location__c</name>
+        <picklistValues>
+            <masterLabel>Adelaide</masterLabel>
+            <translation><!-- Adelaide --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Canberra</masterLabel>
+            <translation><!-- Canberra --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Melbourne</masterLabel>
+            <translation><!-- Melbourne --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sydney</masterLabel>
+            <translation><!-- Sydney --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Start Location --></label>
+        <name>Start_Location__c</name>
+        <picklistValues>
+            <masterLabel>Adelaide</masterLabel>
+            <translation><!-- Adelaide --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Canberra</masterLabel>
+            <translation><!-- Canberra --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Melbourne</masterLabel>
+            <translation><!-- Melbourne --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sydney</masterLabel>
+            <translation><!-- Sydney --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- CheckAvailability --></label>
+        <name>CheckAvailability</name>
+    </webLinks>
+</CustomObjectTranslation>

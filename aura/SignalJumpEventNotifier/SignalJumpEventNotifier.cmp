@@ -1,0 +1,7 @@
+<aura:component >
+    <!--Register for the event using aura:registerEvent name attribute value plays
+        important rule type represents name of the event along with namespace-->
+    <aura:registerEvent name="signalJump" type="c:EventExample"/>
+    <lightning:button label="Send Message" onclick="{! c.sendMessage}"/>
+	
+</aura:component>

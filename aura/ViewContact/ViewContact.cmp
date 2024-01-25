@@ -1,0 +1,4 @@
+<aura:component>
+    <aura:handler name="viewContact" event="c:ContactEvent" action="{! c.displayCont}"/>
+    <c:AccountSearch/>
+</aura:component>

@@ -1,0 +1,46 @@
+<aura:component controller="AccountSearchController">
+  <aura:attribute name="inputA" type="Integer"/>
+  <aura:attribute name="accId" type="Id"/>
+  <aura:attribute name="accList" type="List"/>
+
+  <aura:registerEvent name="viewContact" type="c:ContactEvent"/>
+    
+   <div class="search">
+    <div class="input">
+        <lightning:input type="text" label="Account Search" name="search" value="{! v.inputA}"/>
+    </div>
+    <div class="btn1">
+        <lightning:button label="Search" onclick="{! c.getAllacc}" aura:Id="btn1" iconName="utility:search"/>
+    </div>
+   </div>    
+    
+     <!-- Display spinner -->
+    <lightning:spinner variant="brand" 
+                       size="large"
+                       class="slds-hide" 
+                       aura:Id="spinner"/>
+    
+    <aura:handler event="aura:waiting" action="{! c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{! c.hideSpinner}"/>
+    
+     <table class="slds-table slds-table_bordered">
+        <thead>
+            <th>Name</th>
+            <th>Site</th>
+            <th>Shipping Address</th>
+            <th>Owner</th>
+        </thead>
+        <tbody>
+            <aura:iteration items="{! v.accList}" var="acc">
+                <tr>
+                    <td>{! acc.Name}</td>
+                    <td>{! acc.Site}</td>
+                    <td>{! acc.ShippingAddress}</td>
+                    <td><lightning:button label="View Contact" onclick="{! c.viewCon}"/></td>
+                </tr>
+             
+            </aura:iteration>
+              <aura:set attribute="accId" value="acc.id"/>   
+        </tbody>
+    </table>
+</aura:component>

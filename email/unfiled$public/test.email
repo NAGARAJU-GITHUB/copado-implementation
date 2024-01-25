@@ -1,0 +1,7 @@
+<messaging:emailTemplate subject="VF_Component" recipientType="User" relatedToType="Account">
+<messaging:plainTextEmailBody >
+Congratulations!
+This is your new Visualforce Email Template.
+<c:Test_component />
+</messaging:plainTextEmailBody>
+</messaging:emailTemplate>

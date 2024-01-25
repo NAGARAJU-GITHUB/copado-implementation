@@ -1,0 +1,31 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
+    <aura:handler event="c:BoatSelected" action="{!c.onBoatSelected}"/>
+    <aura:handler name="BoatReviewAdded" event="c:BoatReviewAdded" action="{!c.onBoatReviewAdded}"/>
+    <aura:attribute name="boat" type="Boat__c" access="public"/>
+    <aura:attribute name="id" type="Id" access="public"/>
+    <aura:attribute name="recordError" type="String"/>
+
+    <force:recordData   aura:id="service" recordId = "{!v.id}" targetFields = "{!v.boat}" 
+                        targetError = "{!v.recordError}" fields = "Id,Name,Description__c,Price__c,
+                        Length__c,Contact__r.Name,Contact__r.Email,
+                        Contact__r.HomePhone,BoatType__r.Name,Picture__c" recordUpdated = "{!c.onRecordUpdated}"/>
+                        
+    <aura:if isTrue="{! !empty(v.boat)}">
+        <lightning:tabset aura:id="boatdetails">
+            <lightning:tab label="DETAILS"> 
+                <c:BoatDetail boat="{!v.boat}"/> 
+            </lightning:tab>
+            <lightning:tab id="boatreviewtab" label="REVIEWS">
+                <c:BoatReviews boat="{!v.boat}"/>
+            </lightning:tab>
+            <lightning:tab label="ADD REVIEW">
+                <c:AddBoatReview boat="{!v.boat}"/>
+            </lightning:tab>
+        </lightning:tabset> 
+    </aura:if>
+    <aura:if isTrue="{!not(empty(v.recordError))}">
+        <div class="recordError">
+            {!v.recordError}
+         </div>
+    </aura:if>
+</aura:component>

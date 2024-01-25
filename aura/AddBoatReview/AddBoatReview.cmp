@@ -1,0 +1,32 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="BoatReviewAdded" type="c:BoatReviewAdded" />
+    <aura:attribute name="boatReview" type="BoatReview__c" default ="{'sObjectType':'BoatReview__c','Name':'','Comment__c':''}"/>
+    <aura:attribute name="boat" type="Boat__c"/>
+    <aura:attribute name="recordError" type="String" access="private"/>
+    <force:recordData   aura:id = "service" layoutType="FULL"
+                        targetFields="{!v.boatReview}" targetError="{!v.recordError}" 
+                        fields = "Id,Name,Comment__c,Boat__c" recordUpdated = "{!c.onRecordUpdated}"/>
+    <div class="slds-form">
+        <div class="slds-form-element slds-form-element_stacked">
+            <div class="slds-form-element__control">
+                <lightning:input aura:id = "bookReviewFields" name="title" label = "Title" class="slds-input" type="text" value="{!v.boatReview.Name}" required="true"/>
+            </div>
+            <div class="slds-form-element__control">
+                <label>Description:</label>
+                <lightning:inputRichText aura:id = "bookReviewFields" label="Description" value="{!v.boatReview.Comment__c}" disabledCategories="FORMAT_FONT"/>
+            </div>
+            <div class="slds-form-element__control">
+                <label>Rating:</label>
+                <c:FiveStarRating value="{!v.boatReview.Rating__c}"/>
+            </div>
+            <lightning:button class="slds-align_absolute-center" iconName="utility:save" label="Submit" onclick="{!c.onSave}"/>
+        </div>
+    </div>
+
+    <aura:if isTrue="{!not(empty(v.recordError))}">
+        <div class="recordError">
+            {!v.recordError}
+         </div>
+    </aura:if>
+</aura:component>

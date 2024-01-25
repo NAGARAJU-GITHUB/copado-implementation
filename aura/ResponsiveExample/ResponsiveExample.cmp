@@ -1,0 +1,6 @@
+<aura:component >
+	<div class ="responsiveSelector">
+        Resize the browser window to see the effect!
+        The media query will only apply if the media type is screen and the viewport is 480px wide or wider.
+    </div>
+</aura:component>

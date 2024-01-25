@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ManagedTopics xmlns="http://soap.sforce.com/2006/04/metadata">
+    <managedTopic>
+        <fullName>Wholesale.Featured:Broadband &amp; Voice</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Broadband &amp; Voice</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Wholesale.Featured:Data &amp; IP</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Data &amp; IP</name>
+        <parentName></parentName>
+        <position>1</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Wholesale.Navigational:Data &amp; IP</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Data &amp; IP</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Wholesale.Navigational:Senthil</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Senthil</name>
+        <parentName></parentName>
+        <position>1</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+</ManagedTopics>

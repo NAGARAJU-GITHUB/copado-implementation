@@ -1,0 +1,13 @@
+<aura:component controller="CampingListController">
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <aura:handler name="addItem" event="c:addItemEvent" action="{!c.handleAddItem}"/>
+        <aura:attribute name="items" type="Camping_Item__c[]"/>
+            <fieldset class="slds-box slds-theme--default slds-container--small">
+                <c:campingListForm/>
+            <lightning:card>
+                <aura:iteration items="{!v.items}" var="item">
+                    <c:campingListItem item="{!item}"/>
+                </aura:iteration>
+            </lightning:card>
+        </fieldset>
+</aura:component>

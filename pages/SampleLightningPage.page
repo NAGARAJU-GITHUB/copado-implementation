@@ -1,0 +1,22 @@
+<apex:page >
+   <!-- Include the Javascript library -->
+   <apex:includeLightning />
+   <!-- Specify a placeholder such as div tag to place lightning component instance-->
+   <div id="lt">
+       
+   </div>
+   <!-- Load Lightning application on VF page using $Lightning.user() function 
+    arguments 1. Name of the application along with namespace
+              2. Anonmyous javascript function -->
+    <!-- Create instance dynamically using #Lightning.createComponent() function 
+              1. Name of the component along with namespace
+              2. Attributes, if any, in json format, if none must have {}
+              3. Specify placeholders id i.e div tag id
+              4. Optional anonymous javascript function-->
+    <script>
+    $Lightning.use("c:LightningOutApp", function(){
+                                                   $Lightning.createComponent("c:Calculator",{},"lt");
+                                                   $Lightning.createComponent("c:OppComponent",{},"lt");
+                                                  });
+    </script>
+</apex:page>

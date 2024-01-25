@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ManagedTopics xmlns="http://soap.sforce.com/2006/04/metadata">
+    <managedTopic>
+        <fullName>Category 1 Biking.Featured:Computer Accessories</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Computer Accessories</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Category 1 Biking.Featured:Gaming Wheel</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Gaming Wheel</name>
+        <parentName></parentName>
+        <position>1</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Category 1 Biking.Featured:Keyboards</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Keyboards</name>
+        <parentName></parentName>
+        <position>2</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Category 1 Biking.Navigational:Computer Accessories</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Computer Accessories</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Category 1 Biking.Navigational:Mobile Plan</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Mobile Plan</name>
+        <parentName></parentName>
+        <position>1</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>Category 1 Biking.Navigational:Mouse</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Mouse</name>
+        <parentName>Computer Accessories</parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+</ManagedTopics>

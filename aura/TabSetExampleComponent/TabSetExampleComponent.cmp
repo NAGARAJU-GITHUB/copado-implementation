@@ -1,0 +1,49 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" >
+    <lightning:tabset variant="vertical">
+       <!-- <lightning:tab label="Account Search">
+            <c:ViewContact/>
+        </lightning:tab> -->
+        <lightning:tab label="ComparisonComponent">
+            <c:ComparisonComponent/>
+        </lightning:tab>
+        <lightning:tab label="Calculator">
+            <c:Calculator/>
+        </lightning:tab>
+        <lightning:tab label="Opportunity">
+            <c:OpportunityComponent/>
+        </lightning:tab>
+        <lightning:tab label="Opp">
+            <c:OppComponent/>
+        </lightning:tab>
+        <lightning:tab label="Account">
+            <c:AccComponent/>
+        </lightning:tab>
+        <lightning:tab label="Button">
+            <c:ButtonExampleComponent/>
+        </lightning:tab>
+        <lightning:tab label="Deck">
+            <c:DeckofCardsComponent/>
+        </lightning:tab>
+        <lightning:tab label="MenuTest">
+            <c:MenuExample/>
+        </lightning:tab>
+         <lightning:tab label="Layout">
+            <c:LayoutExampl/>
+        </lightning:tab>
+        <lightning:tab label="Responsive">
+            <c:ResponsiveExample/>
+        </lightning:tab>
+         <lightning:tab label="Modals">
+            <c:ModalExample/>
+        </lightning:tab>
+        <lightning:tab label="SignalJumpEventHandler">
+            <c:SignalJumpEventHandler/>
+        </lightning:tab>
+        <lightning:tab label="Emergency">
+            <c:EmergencyContainer/>
+        </lightning:tab>
+        <lightning:tab label="Contact">
+            <c:ContactForm/>
+        </lightning:tab>
+    </lightning:tabset>
+</aura:component>

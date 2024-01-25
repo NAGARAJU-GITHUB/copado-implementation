@@ -1,0 +1,25 @@
+<aura:component controller="ComparisonController">
+    <lightning:button label="extract" variant="brand" onclick="{! c.extract}"/>
+   <aura:attribute name="showBool" type="Boolean" default="false"/>
+    <aura:attribute name="extractList" type="List"/>
+    <div>
+    
+     <table class="slds-table slds-table_bordered">
+         <thead>
+             <th>Fields</th>
+             <th>Object</th>
+         </thead>
+         <tbody>
+             <aura:renderIf isTrue="{!v.showBool}">
+                 <aura:iteration items="{! v.extractList}" var="cfitem" indexVar="key">
+                     <tr>
+                         <td>{! cfitem.key}</td>
+                         <td>{! cfitem.value}</td>
+                     </tr>
+                 </aura:iteration>
+             </aura:renderIf>
+         </tbody>
+      </table>
+        
+    </div>
+</aura:component>

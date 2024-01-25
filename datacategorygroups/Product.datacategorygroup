@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <label>Mobile</label>
+            <name>Mobile</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Fixed</label>
+            <name>Fixed</name>
+        </dataCategory>
+        <dataCategory>
+            <label>PayTV</label>
+            <name>PayTV</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>Product</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

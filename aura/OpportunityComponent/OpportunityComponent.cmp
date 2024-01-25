@@ -1,0 +1,38 @@
+<aura:component controller="OppController" extends="c:GenericServerCall">
+    
+ <!-- Define list attribute to store all opportunity records fetched from server-->
+    <aura:attribute name="oppList" type="List"/>
+    
+    <!-- Define Aura handler for aura:waiting and aura:donewaiting-->
+    <aura:handler event="aura:waiting" action="{! c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{! c.hideSpinner}"/>
+    
+    <!-- Display spinner -->
+    <lightning:spinner variant="brand" 
+                       size="large" 
+                       class="slds-hide" 
+                       aura:Id="spinner"/>
+    
+    <lightning:button label="Get All Opp"
+                     onclick="{! c.getAllOpps}" aura:Id="btn1"/>
+    <lightning:button label="Get Won Opp"
+                     onclick="{! c.getWonOpps}" aura:Id="btn2"/>
+  <!-- Iterate through oppList and display fields using aura:iteration component-->
+    <table class="slds-table slds-table_bordered">
+        <thead>
+            <th>Name</th>
+            <th>Stage</th>
+            <th>Amount</th>
+        </thead>
+        <tbody>
+            <aura:iteration items="{! v.oppList}" var="opp">
+               
+                    <c:GenericDisplay attr1="{! opp.Name}"
+                                      attr2="{! opp.StageName}"
+                                      attr3="{! opp.Amount}"
+                                      sid="{! opp.Id}"/>
+                
+            </aura:iteration>
+    </tbody>
+    </table>
+</aura:component>

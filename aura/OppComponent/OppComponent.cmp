@@ -1,0 +1,25 @@
+<aura:component controller="OppController" implements="force:appHostable,flexipage:availableForAllPageTypes">
+ <!-- Define list attribute to store all opportunity records fetched from server-->
+    <aura:attribute name="oppList" type="List"/>
+    <lightning:button label="Get All Opp"
+                     onclick="{! c.getAllOpps}" aura:Id="1"/>
+    <lightning:button label="Get Won Opp"
+                     onclick="{! c.getWonOpps}" aura:Id="2"/>
+  <!-- Iterate through oppList and display fields using aura:iteration component-->
+    <table class="slds-table slds-table_bordered">
+        <thead>
+            <th>Name</th>
+            <th>Stage</th>
+            <th>Amount</th>
+        </thead>
+        <tbody>
+            <aura:iteration items="{! v.oppList}" var="opp">
+                <tr>
+                    <td>{! opp.Name}</td>
+                    <td>{! opp.StageName}</td>
+                    <td>{! opp.Amount}</td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+</aura:component>

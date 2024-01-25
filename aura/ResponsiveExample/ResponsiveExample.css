@@ -1,0 +1,10 @@
+.THIS {
+}
+.THIS.responsiveSelector{
+    background-color : lightblue;
+}
+@media screen and (min-width: 480px) {
+    .THIS.responsiveSelector {
+        background-color: lightgreen;
+    }
+}
